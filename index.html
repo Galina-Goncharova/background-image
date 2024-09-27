@@ -8,24 +8,27 @@
     <title>BGimage</title>
   </head>
   <body>
-    <header></header>
+    <header class="page-header"></header>
     <main>
-      <h1>background-images</h1>
-      <div class="container">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+      <div class="wrap">
+        <h1>background-images</h1>
+        <div class="container">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="container big-container">
+          <div class="big-box"></div>
+          <div class="big-box"></div>
+          <div class="big-box"></div>
+        </div>
+        <div class="container midle-container">
+          <div class="big-box"></div>
+          <div class="big-box"></div>
+        </div>
       </div>
-      <div class="container big-container">
-        <div class="big-box"></div>
-        <div class="big-box"></div>
-        <div class="big-box"></div>
-      </div>
-      <div class="container midle-container">
-        <div class="big-box"></div>
-        <div class="big-box"></div>
-      </div>
+
       <div class="wrap">
         <h1>content-images</h1>
         <div class="flex-container">
@@ -59,17 +62,114 @@
         </div>
       </div>
 
-      <div class="dad">
-        <div class="parent">
-          <img src="./img/Fish-001.jpg" alt="" class="image" />
+      <div class="wrap">
+        <h2>Object-fit</h2>
+        <div class="dad">
+          <div class="parent">
+            <img src="./img/Fish-001.jpg" alt="" class="image" />
+          </div>
+          <div class="parent">
+            <img src="./img/Fish-002.jpg" alt="" class="image" />
+          </div>
+          <div class="parent">
+            <img src="./img/Fish-003.jpg" alt="" class="image" />
+          </div>
         </div>
-        <div class="parent">
-          <img src="./img/Fish-002.jpg" alt="" class="image" />
-        </div>
-        <div class="parent">
-          <img src="./img/Fish-003.jpg" alt="" class="image" />
+      </div>
+
+      <div class="wrap">
+        <h1>Position & overflow</h1>
+        <div class="flex-container flex-fish">
+          <article class="product">
+            <div class="thumb-fish-position">
+              <img class="fish-img" src="./img/Fish-001.jpg" alt="fish-first" />
+              <ul class="list flex-wrap product-actions">
+                <li class="social-item">
+                  <svg class="icon" width="30" height="30">
+                    <use href="./img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </li>
+                <li class="social-item">
+                  <svg class="icon" width="30" height="30">
+                    <use href="./img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </li>
+                <li class="social-item">
+                  <svg class="icon" width="30" height="30">
+                    <use href="./img/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+
+            <div class="product-meta">
+              <h2 class="product-name">Fish-01</h2>
+              <p class="product-price">price: 100 crd</p>
+            </div>
+          </article>
+          <article class="product">
+            <div class="thumb-fish-position">
+              <img class="fish-img" src="./img/Fish-002.jpg" alt="fish-first" />
+              <ul class="list flex-wrap product-actions">
+                <li class="social-item">
+                  <svg class="icon" width="30" height="30">
+                    <use href="./img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </li>
+                <li class="social-item">
+                  <svg class="icon" width="30" height="30">
+                    <use href="./img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </li>
+                <li class="social-item">
+                  <svg class="icon" width="30" height="30">
+                    <use href="./img/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+
+            <div class="product-meta">
+              <h2 class="product-name">Fish-02</h2>
+              <p class="product-price">price: 100 crd</p>
+            </div>
+          </article>
+          <article class="product">
+            <div class="thumb-fish-position">
+              <img class="fish-img" src="./img/Fish-003.jpg" alt="fish-first" />
+              <ul class="list flex-wrap product-actions">
+                <li class="social-item">
+                  <svg class="icon" width="30" height="30">
+                    <use href="./img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </li>
+                <li class="social-item">
+                  <svg class="icon" width="30" height="30">
+                    <use href="./img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </li>
+                <li class="social-item">
+                  <svg class="icon" width="30" height="30">
+                    <use href="./img/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+
+            <div class="product-meta">
+              <h2 class="product-name">Fish-03</h2>
+              <p class="product-price">price: 100 crd</p>
+            </div>
+          </article>
         </div>
       </div>
     </main>
+    <script>
+      const { height: pageHeaderHeight } = document
+        .querySelector(".page-header")
+        .getBoundingClientRect();
+
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
+    </script>
   </body>
 </html>

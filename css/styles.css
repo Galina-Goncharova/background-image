@@ -1,16 +1,41 @@
 body {
   margin: 0;
+
   padding: 30px;
+  /* padding-top: 50px; */
   background-color: darkgray;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
 }
 
 img {
-  display: inline-block;
+  display: block;
+  width: 100%;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+/* header */
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 80px;
+  background-color: rgb(73, 22, 128);
+}
+
 /* background-images */
 .container {
   display: flex;
@@ -150,7 +175,6 @@ img {
   padding: 20px;
   gap: 20px;
   box-sizing: border-box;
-  margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
   background-color: blueviolet;
@@ -166,4 +190,92 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* position & overflow */
+
+article {
+  position: relative;
+
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  /* background: #91f0fc; */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.flex-wrap {
+  display: flex;
+}
+.social-item {
+  padding: 5px;
+}
+
+.icon {
+  color: rgb(28, 128, 243);
+  background-color: transparent;
+}
+
+.social-item:hover .icon {
+  color: #91f0fc;
+}
+
+.social-item:hover {
+  background-color: rgb(28, 128, 243);
+}
+
+.icon > use {
+  fill: currentColor;
+}
+
+.product-meta {
+  padding: 15px;
+  background: #91f0fc;
+}
+
+.product-name {
+  text-align: left;
+  margin-top: 0;
+}
+
+.thumb-fish-position {
+  width: 360px;
+  height: 250px;
+  position: relative;
+}
+
+.thumb-fish-position::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(8, 56, 122, 0.5);
+  opacity: 0;
+}
+
+.fish-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  outline: 2px solid red;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5);
+
+  opacity: 0;
+}
+
+.product:hover .product-actions,
+.product:hover .thumb-fish-position::before {
+  opacity: 1;
+}
+
+.flex-fish {
+  justify-content: space-around;
 }
